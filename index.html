@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hari Prasath J | Penetration Tester &amp; VAPT Analyst</title>
+  <meta name="description" content="Hari Prasath J – Penetration Tester and VAPT & Vulnerability Management Analyst specialising in web and mobile application security.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#hero" class="logo"><span class="logo-mark">HP</span><span class="logo-text">hari<span>.sec</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Arsenal</a>
+      <a href="#method">Method</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#contact" class="nav-cta">Hire me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <video class="hero-video" id="heroVideo" muted loop playsinline aria-hidden="true"></video>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Available for VAPT &amp; security roles</p>
+          <h1 class="glitch" data-text="Hari Prasath J">Hari Prasath J</h1>
+          <p class="role">I'm a <span id="typed" class="typed"></span><span class="caret"></span></p>
+          <p class="lead">Penetration tester with 3.5+ years breaking and hardening <strong>web &amp; mobile applications</strong>. I find the flaws before attackers do, map them to <strong>OWASP / MITRE ATT&amp;CK</strong> and help teams close them for good.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Let's talk <span>→</span></a>
+            <a href="#work" class="btn btn-ghost">View my work</a>
+            <a href="Hari_Prasath_New_Resume.pdf" class="btn btn-ghost" download>Resume ↓</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/hari-prasath-j-b476a01ba" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.09V21h-4v-5.07c0-1.21-.02-2.77-1.69-2.77-1.69 0-1.95 1.32-1.95 2.68V21h-4z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hari_das17" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.2-3.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hud" aria-hidden="true">
+          <svg viewBox="0 0 400 400" class="hud-svg">
+            <defs>
+              <radialGradient id="sweepFade" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#00f0ff" stop-opacity=".35"/>
+                <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="190" class="ring ring-dash"/>
+            <circle cx="200" cy="200" r="150" class="ring"/>
+            <circle cx="200" cy="200" r="105" class="ring ring-dash2"/>
+            <circle cx="200" cy="200" r="60" class="ring"/>
+            <line x1="10" y1="200" x2="390" y2="200" class="cross"/><line x1="200" y1="10" x2="200" y2="390" class="cross"/>
+            <g class="sweep"><path d="M200 200 L390 200 A190 190 0 0 0 330 66 Z" fill="url(#sweepFade)"/><line x1="200" y1="200" x2="390" y2="200" stroke="#00f0ff" stroke-width="1.5"/></g>
+            <circle cx="290" cy="120" r="5" class="blip b1"/><circle cx="120" cy="150" r="5" class="blip b2"/>
+            <circle cx="150" cy="300" r="5" class="blip b3"/><circle cx="310" cy="270" r="5" class="blip b4"/>
+            <circle cx="200" cy="200" r="46" fill="#070b14" stroke="url(#ringGrad)" stroke-width="2"/>
+            <text x="200" y="210" text-anchor="middle" class="hud-text">HP</text>
+          </svg>
+          <div class="chip c1">SQLi <b>CRITICAL</b></div>
+          <div class="chip c2">XSS <b>HIGH</b></div>
+          <div class="chip c3">IDOR <b>HIGH</b></div>
+          <div class="chip c4">CVSS <b>9.8</b></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <p class="kicker">// 01 · whoami</p>
+        <h2 class="title">Offensive mindset.<br><span class="grad">Defensive impact.</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a cyber security professional with <strong>3.5+ years</strong> across Vulnerability Assessment &amp; Penetration Testing (VAPT), Vulnerability Management and Security Operations for web and mobile applications.</p>
+            <p>I identify, validate and report vulnerabilities using <strong>OWASP Top 10</strong> and <strong>MASVS</strong> methodology, prioritise risk with <strong>CVSS</strong>, and work hand-in-hand with developers and QA until every finding is re-tested and closed.</p>
+            <p>Beyond testing, I automate: <strong>Ansible</strong> for patching &amp; hardening, <strong>Python</strong> for reporting &amp; monitoring, and SIEM (<strong>Splunk, Wazuh</strong>) background for threat detection, so I understand both sides of the fight.</p>
+            <ul class="facts">
+              <li><span>Location</span> Chennai, Tamil Nadu, India</li>
+              <li><span>Role</span> Application Security Tester</li>
+              <li><span>Education</span> Master Diploma, Cyber Security &amp; Ethical Hacking</li>
+              <li><span>Languages</span> English · Tamil · Telugu</li>
+            </ul>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><b data-count="3.5" data-suffix="+" data-dec="1">0</b><span>Years in security</span></div>
+            <div class="stat"><b data-count="20000" data-suffix="+">0</b><span>Customers on tested platforms</span></div>
+            <div class="stat"><b data-count="500" data-suffix="+">0</b><span>Vendors on tested platforms</span></div>
+            <div class="stat"><b data-count="30" data-suffix="+">0</b><span>Security tools in toolkit</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <p class="kicker">// 02 · arsenal</p>
+        <h2 class="title">Tools of the <span class="grad">trade</span></h2>
+        <div class="cards">
+          <article class="card tilt reveal">
+            <div class="card-icon">🕸️</div>
+            <h3>Web App VAPT</h3>
+            <div class="tags"><span>Burp Suite Pro</span><span>OWASP ZAP</span><span>SQLmap</span><span>Nikto</span><span>Acunetix</span><span>Postman</span></div>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card-icon">📱</div>
+            <h3>Mobile App VAPT</h3>
+            <div class="tags"><span>MobSF</span><span>APKTool</span><span>JADX</span><span>Frida</span><span>Drozer</span><span>ADB</span><span>Genymotion</span></div>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card-icon">🛰️</div>
+            <h3>Vulnerability Management</h3>
+            <div class="tags"><span>Qualys</span><span>Tenable / Nessus</span><span>Rapid7 InsightVM</span><span>Risk prioritisation</span><span>Remediation tracking</span></div>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card-icon">🌐</div>
+            <h3>Network &amp; Infra</h3>
+            <div class="tags"><span>Nmap</span><span>Metasploit</span><span>Wireshark</span><span>Kali Linux</span><span>Hydra</span><span>John the Ripper</span><span>Hashcat</span></div>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card-icon">⚙️</div>
+            <h3>Automation</h3>
+            <div class="tags"><span>Ansible</span><span>Python</span><span>PowerShell</span><span>Git / Bitbucket</span><span>Jira</span></div>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card-icon">🧭</div>
+            <h3>Frameworks &amp; Blue Team</h3>
+            <div class="tags"><span>OWASP Top 10</span><span>MASVS / MSTG</span><span>MITRE ATT&amp;CK</span><span>Cyber Kill Chain</span><span>CVSS</span><span>SAST / DAST</span><span>Splunk</span><span>Wazuh</span><span>ITIL</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD -->
+    <section class="section" id="method">
+      <div class="wrap">
+        <p class="kicker">// 03 · methodology</p>
+        <h2 class="title">How I run an <span class="grad">engagement</span></h2>
+        <ol class="pipeline">
+          <li class="reveal"><i>01</i><h3>Recon</h3><p>Map the attack surface: endpoints, roles, APIs, mobile binaries.</p></li>
+          <li class="reveal"><i>02</i><h3>Scan</h3><p>Automated and enterprise scans to cover the breadth fast.</p></li>
+          <li class="reveal"><i>03</i><h3>Exploit</h3><p>Manual testing and ethical exploitation to prove real impact and remove false positives.</p></li>
+          <li class="reveal"><i>04</i><h3>Report</h3><p>CVSS-rated, ATT&amp;CK-mapped findings with clear remediation guidance.</p></li>
+          <li class="reveal"><i>05</i><h3>Re-test</h3><p>Support fixes, verify closure, track to done.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <p class="kicker">// 04 · experience</p>
+        <h2 class="title">Where I've <span class="grad">worked</span></h2>
+        <div class="timeline">
+          <article class="job reveal">
+            <span class="node"></span>
+            <div class="job-head"><h3>Application Security Tester</h3><time>Sept 2026 – Present</time></div>
+            <p class="company">Primus Global Technologies · Chennai</p>
+            <ul>
+              <li>Application security testing for Tata Electronics' web applications against OWASP Top 10 before production release.</li>
+              <li>Manual and tool-assisted testing; validate findings to remove false positives and document them with risk ratings and remediation guidance.</li>
+              <li>Test authentication, authorization and session management to uncover access-control and logic flaws.</li>
+              <li>Work with client dev and QA teams to explain findings, support fixes and re-test to confirm closure.</li>
+            </ul>
+          </article>
+          <article class="job reveal">
+            <span class="node"></span>
+            <div class="job-head"><h3>Security Analyst – VAPT</h3><time>Apr 2025 – May 2026</time></div>
+            <p class="company">CREK ODR LLP · Chennai</p>
+            <ul>
+              <li>Secure code reviews and web application vulnerability assessments before production deployment.</li>
+              <li>Scanned with Qualys, Tenable and Rapid7; prioritised by risk and business impact; tracked remediation to closure.</li>
+              <li>Wrote and maintained Ansible playbooks for patching, server hardening and configuration management on Linux and Windows.</li>
+              <li>Investigated application logs and abnormal behaviour to detect potential exploitation attempts.</li>
+              <li>Managed vulnerabilities in Jira with ITIL-aligned Incident and Change workflows.</li>
+            </ul>
+          </article>
+          <article class="job reveal">
+            <span class="node"></span>
+            <div class="job-head"><h3>Process Associate</h3><time>Aug 2024 – Oct 2024</time></div>
+            <p class="company">Genpact India Pvt Ltd · Madurai</p>
+            <ul>
+              <li>Non-voice process operations for an insurance domain process, before moving back to a dedicated VAPT / cybersecurity role.</li>
+            </ul>
+          </article>
+          <article class="job reveal">
+            <span class="node"></span>
+            <div class="job-head"><h3>Security Analyst</h3><time>Jul 2022 – Jul 2024</time></div>
+            <p class="company">NPai Pvt Ltd · Madurai</p>
+            <ul>
+              <li>Security testing and vulnerability assessments on web and mobile features serving 20,000+ customers and 500+ vendors.</li>
+              <li>Periodic Qualys scanning; supported patch management and remediation planning with Ansible.</li>
+              <li>Tested authentication, authorization and role-based access controls across multiple user roles.</li>
+              <li>Built Python automation for vulnerability reporting and security monitoring; security-focused code reviews before release.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <p class="kicker">// 05 · capabilities in action</p>
+        <h2 class="title">What I <span class="grad">deliver</span></h2>
+        <div class="work-grid">
+          <article class="work tilt reveal"><div class="work-art art1"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="70" y="26" width="160" height="108" rx="10" class="s1"/><path d="M70 50h160" class="s1"/><circle cx="85" cy="38" r="3" class="f1"/><circle cx="96" cy="38" r="3" class="f2"/><circle cx="107" cy="38" r="3" class="f3"/><rect x="122" y="33" width="96" height="10" rx="5" class="s2"/><path d="M88 70h50M88 86h72M88 102h40" class="s2"/><g class="pulse"><circle cx="195" cy="98" r="22" class="s3"/><path d="M188 98l5 5 10-11" class="s3"/></g><text x="156" y="72" class="t">&lt;script&gt;</text></svg></div><h3>Web Application VAPT</h3><p>OWASP Top 10 testing with Burp Suite, ZAP, SQLmap and Nikto, covering auth, access control and session flaws.</p><div class="tags"><span>Burp</span><span>OWASP</span><span>API</span></div></article>
+          <article class="work tilt reveal"><div class="work-art art2"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="108" y="14" width="84" height="132" rx="14" class="s1"/><rect x="138" y="20" width="24" height="4" rx="2" class="f1"/><path d="M150 52l26 10v20c0 16-12 26-26 32-14-6-26-16-26-32V62z" class="s3 pulse"/><path d="M140 84l8 8 14-16" class="s3"/><path d="M60 50h30M60 66h18M210 100h30M222 116h18" class="s2"/></svg></div><h3>Mobile App Security</h3><p>Android/iOS testing per OWASP MASVS: static and dynamic analysis with MobSF, JADX, Frida and Drozer.</p><div class="tags"><span>MASVS</span><span>Frida</span><span>MobSF</span></div></article>
+          <article class="work tilt reveal"><div class="work-art art3"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M50 130h200" class="s2"/><rect x="66" y="70" width="26" height="60" rx="4" class="bar b-r"/><rect x="104" y="54" width="26" height="76" rx="4" class="bar b-o"/><rect x="142" y="86" width="26" height="44" rx="4" class="bar b-y"/><rect x="180" y="100" width="26" height="30" rx="4" class="bar b-g"/><rect x="218" y="112" width="26" height="18" rx="4" class="bar b-c"/><path d="M56 40l50 14 40 20 50-26 50 14" class="s3"/><circle cx="106" cy="54" r="4" class="f3"/><circle cx="196" cy="48" r="4" class="f3"/></svg></div><h3>Vulnerability Management</h3><p>Enterprise scans with Qualys, Tenable and Rapid7, with risk prioritisation and remediation tracked to closure.</p><div class="tags"><span>Qualys</span><span>Tenable</span><span>Rapid7</span></div></article>
+          <article class="work tilt reveal"><div class="work-art art4"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="80" y="22" width="140" height="34" rx="7" class="s1"/><rect x="80" y="63" width="140" height="34" rx="7" class="s1"/><rect x="80" y="104" width="140" height="34" rx="7" class="s1"/><circle cx="98" cy="39" r="4" class="f3 blinkdot"/><circle cx="98" cy="80" r="4" class="f3 blinkdot d2"/><circle cx="98" cy="121" r="4" class="f3 blinkdot d3"/><path d="M116 39h70M116 80h54M116 121h82" class="s2"/><path d="M200 34l5 5 9-10M200 75l5 5 9-10M200 116l5 5 9-10" class="s3"/></svg></div><h3>Patch &amp; Hardening Automation</h3><p>Ansible playbooks for patch deployment, server hardening and configuration management across Linux and Windows.</p><div class="tags"><span>Ansible</span><span>Linux</span><span>Windows</span></div></article>
+          <article class="work tilt reveal"><div class="work-art art5"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M150 80L70 40M150 80L230 36M150 80L60 118M150 80L238 122M150 80L150 20M150 80L150 144M70 40L60 118M230 36L238 122" class="s2"/><circle cx="150" cy="80" r="14" class="s3 pulse"/><circle cx="150" cy="80" r="5" class="f3"/><circle cx="70" cy="40" r="8" class="s1"/><circle cx="230" cy="36" r="8" class="s1"/><circle cx="60" cy="118" r="8" class="s1"/><circle cx="238" cy="122" r="8" class="s1"/><circle cx="150" cy="20" r="6" class="s1"/><circle cx="150" cy="144" r="6" class="s1"/><circle cx="238" cy="122" r="3" class="f1"/></svg></div><h3>Network Penetration Testing</h3><p>Nmap, Nessus, Metasploit and Wireshark for network-level testing and packet analysis, mapped to MITRE ATT&amp;CK.</p><div class="tags"><span>Nmap</span><span>Metasploit</span><span>ATT&amp;CK</span></div></article>
+          <article class="work tilt reveal"><div class="work-art art6"><svg class="art-svg" viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="82" y="18" width="110" height="130" rx="9" class="s1"/><path d="M98 40h50M98 56h78M98 72h60" class="s2"/><path d="M98 128V108M114 128V96M130 128V112M146 128V90" class="s3"/><circle cx="212" cy="108" r="30" class="s3 pulse"/><text x="212" y="114" text-anchor="middle" class="t big">9.8</text><text x="212" y="146" text-anchor="middle" class="t">CVSS</text></svg></div><h3>Security Reporting &amp; Automation</h3><p>Python, SQL and Excel pipelines that turn raw findings into clear, CVSS-rated VAPT reports and monitoring.</p><div class="tags"><span>Python</span><span>SQL</span><span>CVSS</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials">
+      <div class="wrap">
+        <p class="kicker">// 06 · credentials</p>
+        <h2 class="title">Learning <span class="grad">never stops</span></h2>
+        <div class="cred-grid">
+          <article class="card reveal"><div class="card-icon">🏅</div><h3>Master Diploma, Cyber Security &amp; Ethical Hacking</h3><p class="muted">BIA Institute, Chennai · 2026</p></article>
+          <article class="card reveal"><div class="card-icon">🎯</div><h3>TryHackMe: Pre Security</h3><p class="muted">Certification</p></article>
+          <article class="card reveal"><div class="card-icon">🎓</div><h3>B.Sc Computer Science</h3><p class="muted">Vivekananda College, Madurai · 2022</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="section" id="terminal">
+      <div class="wrap">
+        <p class="kicker">// 07 · interactive</p>
+        <h2 class="title">Try my <span class="grad">terminal</span></h2>
+        <div class="term reveal" id="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>hari@kali: ~</span></div>
+          <div class="term-body" id="termBody" aria-live="polite"></div>
+          <form class="term-input" id="termForm" autocomplete="off">
+            <label for="termCmd">hari@kali:~$</label>
+            <input id="termCmd" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command">
+          </form>
+        </div>
+        <p class="hint">Type <code>help</code> to see commands.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <p class="kicker">// 08 · contact</p>
+        <h2 class="title">Let's secure <span class="grad">something</span></h2>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="mailto:hariprasathj1705@gmail.com"><span>Email</span><b>hariprasathj1705@gmail.com</b></a>
+          <a class="contact-card reveal" href="tel:+916374839323"><span>Phone</span><b>+91 63748 39323</b></a>
+          <a class="contact-card reveal" href="https://www.linkedin.com/in/hari-prasath-j-b476a01ba" target="_blank" rel="noopener"><span>LinkedIn</span><b>Hari Prasath J</b></a>
+          <div class="contact-card reveal"><span>Location</span><b>Chennai, Tamil Nadu, India</b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Hari Prasath J · Built with care and a little paranoia 🔐</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
